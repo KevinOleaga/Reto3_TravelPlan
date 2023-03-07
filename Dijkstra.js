@@ -1,3 +1,10 @@
+/*
+   - Este código crea un gráfico utilizando la variable adj_list. 
+   - Toma dos parámetros, V y E. V es el número de vértices en el gráfico, y E es una matriz que contiene los bordes del gráfico. 
+   - El código crea una lista vacía con elementos V. Luego recorre E y agrega cada borde a adj_list. 
+   - Finalmente, devuelve la variable adj_list.
+*/
+
 function createGraph(V, E) {
     // V - Number of vertices in graph
     // E - Number of edges in graph (u,v,w)
@@ -11,6 +18,16 @@ function createGraph(V, E) {
     }
     return adj_list;
 }
+
+/*
+   - Este código implementa el algoritmo de Dijkstra. 
+   - Se utiliza para encontrar el camino más corto entre dos nodos en un gráfico.
+   - La función toma tres parámetros: un gráfico, el número de vértices (V) y el nodo (src). 
+   - Crea una matriz de nodos visitados (vis) y una matriz de distancias desde el nodo de origen (dist). 
+   - Luego itera a través de cada vértice, estableciendo la distancia mínima desde el nodo de origen. 
+   - Luego establece ese nodo como visitado y actualiza las distancias para todos los nodos conectados. 
+   - Después de recorrer todos los vértices, devuelve una matriz de distancias desde el nodo de origen hasta todos los demás nodos.
+*/
 
 function djikstra(graph, V, src) {
     let vis = Array(V).fill(0);
@@ -48,6 +65,6 @@ let E = [[0, 1, 4], [0, 7, 8], [1, 7, 11], [1, 2, 8], [7, 8, 7], [6, 7, 1], [2, 
 
 let graph = createGraph(V, E);
 let distances = djikstra(graph, V, 0);
-//console.log(distances);
+console.log(distances);
 
-module.exports = { createGraph, djikstra}
+module.exports = { createGraph, djikstra }

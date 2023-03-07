@@ -1,3 +1,7 @@
+/**
+ * Este codigo nunca se utiliza
+ */
+
 let plane = 0;
 let p1=-1, p2=-1;
 for(let pos in data['edges']){
